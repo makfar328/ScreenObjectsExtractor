@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.transform.Scale?>
+<AnchorPane id="anchorPane_layer1"
+            fx:id="anchorPane_layer1"
+            stylesheets="@../css/style-main.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.makar.ocrapp.screenobjectsextractor.view.main.MainController"
+            styleClass="main-view-anchor">
+    <SplitPane id="split-pane-1" fx:id="splitPane_layer2_prevAnchorPane"
+               AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               dividerPositions="0.08">
+        <AnchorPane fx:id="leftMenuPane"
+                    prefWidth="60.0" minWidth="60.0" maxWidth="60.0"
+                    SplitPane.resizableWithParent="false">
+            <VBox id="side-menu-bar" fx:id="vBox_layer4_prevAnchorPane" spacing="10"
+                  AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                  alignment="CENTER">
+                <Region fx:id="topButton1Spacer" prefHeight="20"/>
+                <Button fx:id="startDecomposeButton" styleClass="side-menu-button">
+                    <tooltip>
+                        <Tooltip text="Узнать, что на фотографии"/>
+                    </tooltip>
+                    <graphic>
+                        <HBox alignment="CENTER">
+                            <Group>
+                                <SVGPath styleClass="side-menu-icon" fill="#aaaaaa"
+                                         content="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z">
+                                    <transforms>
+                                        <Scale x="1.333" y="1.333"/>
+                                    </transforms>
+                                </SVGPath>
+                            </Group>
+                            <Label text="Узнать, что на фотографии" visible="false"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Region fx:id="button1Button2Spacer" prefHeight="0"/>
+                <Button fx:id="openSettingsButton" styleClass="side-menu-button">
+                    <tooltip>
+                        <Tooltip text="Открыть настройки"/>
+                    </tooltip>
+                    <graphic>
+                        <HBox alignment="CENTER">
+                            <Group>
+                                <SVGPath styleClass="side-menu-icon" fill="#aaaaaa"
+                                         content="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94zM12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z">
+                                    <transforms>
+                                        <Scale x="1.333" y="1.333"/>
+                                    </transforms>
+                                </SVGPath>
+                            </Group>
+                            <Label fx:id="openSettingsLabel" text="Открыть настройки" visible="false"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Region fx:id="button2Button3Spacer" prefHeight="0"/>
+                <Button fx:id="openJournalButton" styleClass="side-menu-button">
+                    <tooltip>
+                        <Tooltip text="Открыть журнал"/>
+                    </tooltip>
+                    <graphic>
+                        <HBox alignment="CENTER">
+                            <Group>
+                                <SVGPath styleClass="side-menu-icon" fill="#aaaaaa"
+                                         content="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z">
+                                    <transforms>
+                                        <Scale x="1.333" y="1.333"/>
+                                    </transforms>
+                                </SVGPath>
+                            </Group>
+                            <Label fx:id="openJournalLabel" text="Открыть журнал" visible="false"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+                <Region fx:id="button3BottomSpacer" VBox.vgrow="ALWAYS"/>
+            </VBox>
+        </AnchorPane>
+        <AnchorPane id="anchorPane2_layer3_prevSplitPane" fx:id="anchorPane2_layer3_prevSplitPane">
+            <!-- ДОБАВЛЕНЫ AnchorPane.top/bottom/left/rightAnchor="0.0" сюда -->
+            <SplitPane id="split-pane-1" fx:id="splitPane_layer4_prevAnchorPane"
+                       dividerPositions="0.0" orientation="VERTICAL"
+                       AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                <AnchorPane id="AnchorPane1_layer5_prevSplitPane" fx:id="AnchorPane1_layer5_prevSplitPane" SplitPane.resizableWithParent="false">
+                </AnchorPane>
+
+                <VBox fx:id="VBox1_layer5_prevSplitPane"
+                      spacing="0" AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+                    <!-- Здесь область с результатами поиска -->
+                    <!-- VBox1 занимает 70% высоты -->
+                    <VBox id="VBox1_layer6_prevAnchorPane" fx:id="VBox1_layer6_prevAnchorPane"
+                          styleClass="search-results-container" VBox.vgrow="ALWAYS">
+
+                        <!-- StackPane: слои placeholder и реальный контент -->
+                        <StackPane VBox.vgrow="ALWAYS" prefHeight="200">
+
+                            <!-- Placeholder: виден когда resultsHBox пуст -->
+                            <VBox fx:id="searchResultsPlaceholder"
+                                  alignment="CENTER"
+                                  spacing="14"
+                                  maxWidth="Infinity"
+                                  maxHeight="Infinity"
+                                  StackPane.alignment="CENTER">
+
+                                <!-- Иконка лупы (Material Design search, viewBox 0 0 24 24, scale x3 = ~60×60px) -->
+                                <Group>
+                                    <SVGPath fill="#aaaaaa"
+                                             content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                        <transforms>
+                                            <Scale x="3.0" y="3.0"/>
+                                        </transforms>
+                                    </SVGPath>
+                                </Group>
+
+                                <Label text="Результаты поиска появятся здесь"
+                                       styleClass="search-results-placeholder"/>
+                            </VBox>
+
+                            <!-- Контент: ScrollPane с реальными результатами -->
+                            <ScrollPane fx:id="searchResultsScrollPane"
+                                        hbarPolicy="ALWAYS" vbarPolicy="NEVER"
+                                        fitToHeight="true"
+                                        HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                                <HBox id="results-hbox" fx:id="resultsHBox" spacing="10" alignment="CENTER_LEFT"/>
+                            </ScrollPane>
+
+                        </StackPane>
+                        <HBox id="probability-hbox" fx:id="Probability" prefHeight="20" alignment="CENTER_LEFT" spacing="5">
+                            <Button id="GlobalProbabilityButton" fx:id="GlobalProbabilityButton" styleClass="search-results-area"/>
+                            <Label text="-" styleClass="search-results-area"/>
+                            <Slider fx:id="probabilitySlider" min="0" max="100" value="50" HBox.hgrow="ALWAYS"/>
+                            <Label text="+" styleClass="search-results-area"/>
+                            <TextArea id="ProbabilityValue" fx:id="ProbabilityValueTextArea" styleClass="search-results-area"
+                                      prefWidth="60" editable="false" promptText="0.0%"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Пропорциональный разделитель -->
+                    <Region prefHeight="0" VBox.vgrow="ALWAYS" style="-fx-pref-height: 10; -fx-min-height: 5; -fx-max-height: 10;"/>
+
+                    <!-- AnchorPane1 занимает 30% высоты -->
+                    <AnchorPane id="AnchorPane1_layer6_AnchorPane" fx:id="AnchorPane1_layer6_AnchorPane"
+                                AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.bottomAnchor="0.0">
+                        <VBox spacing="10" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15" AnchorPane.rightAnchor="15">
+                            <!-- searchQueryTextArea сейчас существует, но не реализован, оставлен на будущие версии -->
+                            <TextArea fx:id="searchQueryTextArea" HBox.hgrow="ALWAYS"
+                                      prefRowCount="1" wrapText="true" promptText="Введите запрос..."
+                                      styleClass="search-text-area" minHeight="32" maxHeight="96"
+                                      visible="false" managed="false"/>
+                            <HBox id="searchBarHBox" fx:id="searchBarHBox" alignment="CENTER_LEFT" spacing="10">
+                                <!-- не реализовано, реализация отложена -->
+                                <!--Button fx:id="settingsSearchButton" styleClass="icon-button" prefWidth="32" prefHeight="32" visible="false">
+                                    <graphic>
+                                        <ImageView fitWidth="24" fitHeight="24" preserveRatio="true"/>
+                                    </graphic>
+                                </Button-->
+                                <Button fx:id="viewSelectedDirectoriesButton" styleClass="icon-button" prefHeight="32" prefWidth="32">
+                                    <graphic>
+                                        <ImageView fitWidth="24" fitHeight="24" preserveRatio="true"/>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="selectDirectoryButton" styleClass="icon-button" prefWidth="32" prefHeight="32">
+                                    <graphic>
+                                        <ImageView fitWidth="24" fitHeight="24" preserveRatio="true"/>
+                                    </graphic>
+                                </Button>
+                                <VBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                                    <Label text="Не раньше "/>
+                                    <DatePicker fx:id="minDatePicker" promptText="Введите дату"/>
+                                </VBox>
+                                <VBox HBox.hgrow="ALWAYS" alignment="CENTER_LEFT">
+                                    <Label text="Не позже "/>
+                                    <DatePicker fx:id="maxDatePicker" promptText="Введите дату"/>
+                                </VBox>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <ProgressIndicator fx:id="searchProgressIndicator"
+                                                   prefWidth="28" prefHeight="28"
+                                                   visible="false" managed="false"/>
+                                <Button fx:id="executeSearchButton" styleClass="icon-button" prefWidth="32" prefHeight="32">
+                                    <graphic>
+                                        <ImageView fitWidth="24" fitHeight="24" preserveRatio="true"/>
+                                    </graphic>
+                                </Button>
+                            </HBox>
+
+                            <HBox>
+                                <TilePane prefRows="2" prefColumns="1">
+                                    <Label text="Выбрать классы объектов:"/>
+                                    <TextField fx:id="objectClassTextField" promptText="Объект..." styleClass="drop-field"/>
+                                </TilePane>
+
+                                <Region prefWidth="10"> </Region>
+
+                                <TilePane prefRows="2" prefColumns="1">
+                                    <Label text="Выбрать расширения файлов:"/>
+                                    <TextField fx:id="fileExtensionTextField" promptText="Расширение..." styleClass="drop-field"/>
+                                    <FlowPane fx:id="fileTypesContainer" hgap="5" vgap="5"/>
+                                </TilePane>
+                            </HBox>
+
+                            <AnchorPane fx:id="anchorObjectListBackgroundAnchor">
+                                <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                                    <FlowPane fx:id="selectedClassTagsContainer" hgap="5" vgap="5"
+                                              AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0"
+                                              AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0"/>
+                                </ScrollPane>
+                            </AnchorPane>
+                        </VBox>
+                    </AnchorPane>
+                </VBox>
+
+            </SplitPane>
+        </AnchorPane>
+    </SplitPane>
+    <Label fx:id="statusBar" text="" AnchorPane.bottomAnchor="5" AnchorPane.leftAnchor="5"
+           styleClass="status-bar-label" visible="false">
+    </Label>
+</AnchorPane>

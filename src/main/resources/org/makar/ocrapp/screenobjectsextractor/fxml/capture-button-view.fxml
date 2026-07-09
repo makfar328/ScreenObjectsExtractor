@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Circle?>
+<StackPane fx:id="rootPane"
+           prefHeight="80.0" minHeight="80.0" maxHeight="80.0"
+           prefWidth="80.0" minWidth="80.0" maxWidth="80.0"
+           stylesheets="@../css/capture-button-scene.css" styleClass="capture-button-container"
+           xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.makar.ocrapp.screenobjectsextractor.view.screencapture.CaptureButtonController">
+
+    <ImageView fx:id="captureButtonImageView" fitHeight="65" fitWidth="65" preserveRatio="true" styleClass="image-view">
+
+    </ImageView>
+
+    <Circle fx:id="buttonShape" styleClass="capture-button-circle"/>
+
+</StackPane>

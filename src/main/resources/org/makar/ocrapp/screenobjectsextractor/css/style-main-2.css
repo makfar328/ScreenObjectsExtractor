@@ -1,0 +1,240 @@
+.main-view-anchor {
+    -fx-background-color: #030360;
+}
+
+#split-pane-1 > .split-pane-divider {
+    -fx-padding: 0; /* убирает область захвата */
+    -fx-background-color: transparent; /* делает невидимым, если нужно */
+    -fx-max-width: 4; /* можно уменьшить ширину */
+    -fx-max-height: 4;
+    -fx-cursor: default; /* обычный курсор */
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-effect: null;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-pointer-events: none; /* главное! */
+}
+
+.round-button {
+    -fx-background-radius: 1000;
+    -fx-background-color: #2f2f50;
+    -fx-border-color: #cf9;
+    -fx-border-radius: 1000;
+
+    -fx-text-fill: #ffffff;
+    /*-fx-padding: 10, 10, 10, 10; top, right, bottom, left */
+}
+
+.addDocumentButton {
+    text: "Button";
+    textFill: "#eae1e1";
+    layoutX: 90%;
+    layoutY: center;
+}
+
+.side-menu-bar {
+    /*-fx-padding: 10% 10% 10% 10%;*/
+    -fx-background-color: #393957;
+}
+
+.side-menu-button {
+    -fx-background-radius: 8;
+    -fx-background-color: #6868a8;
+    -fx-border-color: #38385c;
+    -fx-border-radius: 2;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-pref-width: 80%;
+    -fx-pref-height: 80%;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #babae4, 4, 0.2, 0, 2);
+}
+
+.icon-button {
+}
+
+/* Стили для контейнера результатов поиска */
+.search-results-container {
+    -fx-background-color: rgba(30, 11, 94, 0.08);
+    -fx-padding: 10;
+    -fx-border-color: #48487c;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+#search-results-scrollPane {
+    -fx-background-color: #435057;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+    -fx-border-color: #3d5895;
+}
+
+/* Для внутреннего viewport ScrollPane */
+#search-results-scrollPane .viewport {
+    -fx-background-color: #435057;
+    -fx-background-radius: 10;
+}
+#search-results-scrollPane .scroll-bar:horizontal {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-background-color: transparent;
+    -fx-pref-width: 80;
+}
+#search-results-scrollPane .thumb {
+    -fx-background-color: #6a6a95; /* цвет самого ползунка */
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #303051;
+    -fx-border-width: 50;
+}
+
+#results-hbox {
+    -fx-background-color: #303051;
+    -fx-border-radius: 5;
+    -fx-padding: 5; /* Было inline, теперь тут */
+}
+
+#probability-hbox {
+    -fx-background-color: #303051;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+}
+
+.search-results-container .label,
+.search-results-container .button,
+.search-results-container .text-area {
+    -fx-text-fill: #ffffff;
+}
+
+/* Контейнер placeholder */
+.search-results-placeholder-container {
+    /* ничего особого не нужно — выравнивание задано в FXML */
+}
+
+/* Подпись под иконкой */
+.search-results-placeholder {
+    -fx-text-fill: #888888;
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-background-color: #435057;
+    /*    -fx-background-color: transparent;*/
+    -fx-alignment: center;
+}
+
+#GlobalProbabilityButton {
+    -fx-background-color: #6a6a95;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10;
+}
+
+#Probability {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 5;
+    -fx-padding: 5;
+}
+
+#ProbabilityValueTextArea {
+    -fx-prompt-text-fill: #aaaaaa;
+    -fx-background-color: #5a5a85;
+}
+
+/* Для маленьких label */
+#probability-hbox .label {
+    -fx-font-size: 10;
+}
+
+
+/* Css для элементов подсистемы поиска, отвечающей за заполнение формы (получения SearchCriteria) */
+.search-text-area {
+
+}
+
+.drop-field {
+    -fx-background-color: #5c5c7a;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+    -fx-border-color: #cf9;
+    -fx-padding: 5px;
+
+}
+
+.list-view {
+    /*-fx-background-color: #2f2f50;*/
+    -fx-background-color: #5c5c7a;
+    -fx-border-color: #cf9;
+    -fx-border-radius: 5;
+    -fx-border-width: 1px;
+    -fx-padding: 0;
+
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #ffffff;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-fill: #4a4a75;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #6a6ad9;
+    -fx-text-fill: #87d68b;
+}
+
+
+/* Область тэгов */
+/* Стиль для отдельного тега класса объекта */
+.object-class-tag {
+    -fx-background-color: #6a6ad9; /* Цвет фона тега */
+    -fx-background-radius: 5;      /* Скругленные углы */
+    -fx-padding: 3 8 3 8;          /* Отступы внутри тега */
+    -fx-alignment: CENTER_LEFT;
+}
+
+
+/* Стиль для метки имени класса */
+.object-class-tag-name {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Стиль для Label счетчика */
+.object-class-tag-count {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-text-fill: #e8e8e8;
+    -fx-padding: 0 2 0 0;
+}
+
+/* Общий стиль для кнопок +/- и X */
+.tag-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-padding: 0 3 0 3;
+    -fx-min-width: 20px;
+    -fx-pref-width: 20px;
+    -fx-min-height: 20px;
+    -fx-pref-height: 20px;
+}
+
+.tag-button:hover {
+    -fx-background-color: #8080d8;
+    -fx-border-radius: 2;
+    -fx-border-color: white;
+    -fx-border-width: 1;
+    -fx-font-size: 11;
+}
+
+.object-class-tag .button.object-class-tag-remove-button:hover {
+    -fx-text-fill: #ffdddd; /* Цвет текста при наведении */
+}
+
+.object-class-tag .vbox .button:hover {
+    -fx-text-fill: #cf9;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../css/selected-directories-scene.css"
+            fx:controller="org.makar.ocrapp.screenobjectsextractor.view.selecteddirectories.SelectedDirectoriesController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox prefHeight="372.0" prefWidth="572.0" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="15" AnchorPane.rightAnchor="15" AnchorPane.topAnchor="15">
+        <ScrollPane>
+            <Label text="Выбранные каталоги для поиска: " style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <VBox fx:id="directoriesListVBox" style="-fx-background-color: #f3f2f2">
+                <padding>
+                    <Insets/>
+                </padding>
+            </VBox>
+        </ScrollPane>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,221 @@
+/* =======================================================
+   IntelliJ IDEA — Darcula Theme
+   Screen Analysis Results Window
+   ======================================================= */
+
+/* --- Root / Base --- */
+.root {
+    -fx-font-family: "JetBrains Mono", "Consolas", "Segoe UI", "Arial";
+    -fx-font-size: 13px;
+    -fx-background-color: #2B2B2B;
+    -fx-text-fill: #A9B7C6;
+}
+
+/* --- Anchor panes & VBoxes --- */
+.anchor-pane,
+.vbox {
+    -fx-background-color: #2B2B2B;
+}
+
+/* =======================================================
+   Menu Bar
+   ======================================================= */
+.menu-bar {
+    -fx-background-color: #3C3F41;
+    -fx-border-color: #232323;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 2 4 2 4;
+}
+
+.menu-bar .menu-button {
+    -fx-background-color: transparent;
+    -fx-padding: 4 8 4 8;
+    -fx-background-radius: 4;
+}
+
+.menu-bar .label {
+    -fx-text-fill: #BBBBBB;
+}
+
+.menu-bar .menu-button:hover,
+.menu-bar .menu-button:focused,
+.menu-bar .menu-button:showing {
+    -fx-background-color: #4C5052;
+}
+
+.menu-bar .menu-button:hover > .label,
+.menu-bar .menu-button:focused > .label,
+.menu-bar .menu-button:showing > .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* --- Popup / Context menu --- */
+.context-menu {
+    -fx-background-color: #3C3F41;
+    -fx-border-color: #515151;
+    -fx-border-width: 1;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 4 0 4 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.55), 14, 0.0, 0, 5);
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 5 24 5 10;
+}
+
+.menu-item .label {
+    -fx-text-fill: #BBBBBB;
+}
+
+.menu-item:focused,
+.menu-item:hover {
+    -fx-background-color: #4B6EAF;
+    -fx-background-radius: 4;
+}
+
+.menu-item:focused .label,
+.menu-item:hover .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* =======================================================
+   SplitPane
+   ======================================================= */
+.split-pane {
+    -fx-background-color: #2B2B2B;
+    -fx-padding: 0;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #323335;
+    -fx-padding: 0 1 0 1;
+    -fx-cursor: h-resize;
+}
+
+.split-pane > .split-pane-divider:hover {
+    -fx-background-color: #4B6EAF;
+}
+
+/* =======================================================
+   ScrollPane
+   ======================================================= */
+.scroll-pane {
+    -fx-background-color: #2B2B2B;
+    -fx-background: #2B2B2B;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: #2B2B2B;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #3C3F41;
+}
+
+/* --- Scrollbar --- */
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: #3C3F41;
+    -fx-padding: 2;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #616161;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #808080;
+}
+
+.scroll-bar .thumb:pressed {
+    -fx-background-color: #A0A0A0;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Убираем стрелки — минималистичный стиль IDEA */
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* =======================================================
+   Segmented Button Group
+   (стиль IntelliJ — группа переключающихся кнопок)
+   ======================================================= */
+
+/* --- Общая база --- */
+.validation-button-left,
+.validation-button-middle,
+.validation-button-right {
+    -fx-background-color: linear-gradient(to bottom, #4C5052 0%, #434647 100%);
+    -fx-text-fill: #BBBBBB;
+    -fx-border-color: #5A5E60;
+    -fx-padding: 5 16 5 16;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Левая кнопка */
+.validation-button-left {
+    -fx-background-radius: 5 0 0 5;
+    -fx-border-radius: 5 0 0 5;
+    -fx-border-width: 1 0 1 1;
+}
+
+/* Средние кнопки */
+.validation-button-middle {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-width: 1 0 1 1;
+}
+
+/* Правая кнопка */
+.validation-button-right {
+    -fx-background-radius: 0 5 5 0;
+    -fx-border-radius: 0 5 5 0;
+    -fx-border-width: 1 1 1 1;
+}
+
+/* --- Hover --- */
+.validation-button-left:hover,
+.validation-button-middle:hover,
+.validation-button-right:hover {
+    -fx-background-color: linear-gradient(to bottom, #5E6365 0%, #565A5C 100%);
+    -fx-text-fill: #FFFFFF;
+}
+
+/* --- Pressed --- */
+.validation-button-left:pressed,
+.validation-button-middle:pressed,
+.validation-button-right:pressed {
+    -fx-background-color: #393C3E;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* --- Selected / Active (синяя кнопка IDEA) --- */
+.validation-button-selected {
+    -fx-background-color: linear-gradient(to bottom, #466DA3 0%, #3B5E92 100%);
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #2D5291;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.35), 6, 0, 0, 2);
+}
+
+/* Override hover для выбранной кнопки */
+.validation-button-selected:hover {
+    -fx-background-color: linear-gradient(to bottom, #527BB5 0%, #4470A8 100%);
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #2D5291;
+}

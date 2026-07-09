@@ -1,0 +1,691 @@
+/* ══════════════════════════════════════════════
+   ROOT — IntelliJ IDEA New UI / Darcula palette
+   ══════════════════════════════════════════════ */
+
+.main-view-anchor {
+    -fx-background-color: #1e1f22;
+    -fx-font-family: "JetBrains Mono", "Consolas", "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* ══════════════════════════════════════════════
+   SPLIT PANE DIVIDERS
+   ══════════════════════════════════════════════ */
+
+.split-pane > .split-pane-divider {
+    -fx-padding: 0;
+    -fx-background-color: #393b40;
+    -fx-max-width: 1;
+    -fx-max-height: 1;
+    -fx-cursor: default;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-effect: null;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.split-pane {
+    -fx-background-color: #1e1f22;
+    -fx-border-color: transparent;
+}
+
+/* ══════════════════════════════════════════════
+   SIDE MENU
+   ══════════════════════════════════════════════ */
+
+.side-menu-bar {
+    -fx-background-color: #2b2d30;
+    -fx-border-color: #393b40;
+    -fx-border-width: 0 1 0 0;
+}
+
+.side-menu-button {
+    -fx-background-radius: 6;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6;
+    -fx-text-fill: #a9b7c6;
+    -fx-font-size: 13px;
+    -fx-pref-width: 80%;
+    -fx-pref-height: 48px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-effect: null;
+}
+
+.side-menu-button:hover {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #555759;
+    -fx-effect: null;
+}
+
+.side-menu-button:pressed {
+    -fx-background-color: #214283;
+    -fx-border-color: #4078c8;
+}
+
+.side-menu-button:focused {
+    -fx-border-color: #4078c8;
+    -fx-border-width: 1;
+}
+
+/* ══════════════════════════════════════════════
+   ICON BUTTONS (toolbar)
+   ══════════════════════════════════════════════ */
+
+.icon-button {
+    -fx-background-color: #313335;
+    -fx-background-radius: 6;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: null;
+    -fx-padding: 4;
+}
+
+.icon-button:hover {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #4078c8;
+    -fx-effect: dropshadow(gaussian, rgba(64, 120, 200, 0.25), 6, 0, 0, 0);
+}
+
+.icon-button:pressed {
+    -fx-background-color: #214283;
+    -fx-border-color: #3574f0;
+    -fx-effect: null;
+}
+
+.icon-button:focused {
+    -fx-border-color: #4078c8;
+}
+
+/* ══════════════════════════════════════════════
+   SEARCH RESULTS CONTAINER (верхняя рабочая область)
+   ══════════════════════════════════════════════ */
+
+.search-results-container {
+    -fx-background-color: #2b2d30;
+    -fx-padding: 8;
+    -fx-border-color: transparent transparent #393b40 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL PANE — лента фотографий
+   ══════════════════════════════════════════════ */
+
+#search-results-scrollPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+#search-results-scrollPane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Горизонтальный scrollbar */
+#search-results-scrollPane .scroll-bar:horizontal {
+    -fx-background-color: #1e1f22;
+    -fx-pref-height: 8;
+    -fx-padding: 0;
+    -fx-background-radius: 0;
+}
+
+#search-results-scrollPane .scroll-bar:horizontal .thumb {
+    -fx-background-color: #4c5052;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: transparent;
+}
+
+#search-results-scrollPane .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #6c707b;
+}
+
+#search-results-scrollPane .scroll-bar:horizontal .increment-button,
+#search-results-scrollPane .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+}
+
+#search-results-scrollPane .scroll-bar:horizontal .increment-arrow,
+#search-results-scrollPane .scroll-bar:horizontal .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* ══════════════════════════════════════════════
+   RESULTS HBOX — карточки фотографий лежат здесь
+   ══════════════════════════════════════════════ */
+
+#results-hbox {
+    -fx-background-color: transparent;
+    -fx-padding: 8 8 4 8;
+    -fx-spacing: 10;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ══════════════════════════════════════════════
+   PHOTO CARDS — карточки результатов поиска
+   (создаются динамически, стили на будущее)
+   ══════════════════════════════════════════════ */
+
+.photo-card {
+    -fx-background-color: #313335;
+    -fx-background-radius: 8;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 6, 0, 0, 2);
+}
+
+.photo-card:hover {
+    -fx-border-color: #4078c8;
+    -fx-background-color: #3c3f41;
+    -fx-effect: dropshadow(gaussian, rgba(64, 120, 200, 0.35), 10, 0, 0, 3);
+}
+
+.photo-card:selected,
+.photo-card.selected {
+    -fx-border-color: #3574f0;
+    -fx-border-width: 2;
+    -fx-background-color: #1e2a3a;
+    -fx-effect: dropshadow(gaussian, rgba(53, 116, 240, 0.5), 12, 0, 0, 0);
+}
+
+.photo-card-label {
+    -fx-text-fill: #a9b7c6;
+    -fx-font-size: 11px;
+    -fx-alignment: CENTER;
+    -fx-padding: 2 0 0 0;
+    -fx-max-width: Infinity;
+}
+
+/* ══════════════════════════════════════════════
+   PLACEHOLDER (пусто — отображение лупы)
+   ══════════════════════════════════════════════ */
+
+.search-results-placeholder {
+    -fx-text-fill: #6c707b;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER;
+}
+
+/* ══════════════════════════════════════════════
+   PROBABILITY BAR
+   ══════════════════════════════════════════════ */
+
+#probability-hbox {
+    -fx-background-color: #2b2d30;
+    -fx-border-color: #393b40;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 4 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 6;
+}
+
+#probability-hbox .label {
+    -fx-text-fill: #6c707b;
+    -fx-font-size: 11px;
+}
+
+#GlobalProbabilityButton {
+    -fx-background-color: #3574f0;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: transparent;
+    -fx-padding: 3 10;
+    -fx-cursor: hand;
+    -fx-effect: null;
+}
+
+#GlobalProbabilityButton:hover {
+    -fx-background-color: #4a8af4;
+    -fx-effect: dropshadow(gaussian, rgba(53, 116, 240, 0.4), 6, 0, 0, 0);
+}
+
+#GlobalProbabilityButton:pressed {
+    -fx-background-color: #214283;
+    -fx-effect: null;
+}
+
+#ProbabilityValueTextArea {
+    -fx-prompt-text-fill: #6c707b;
+    -fx-background-color: #313335;
+    -fx-text-fill: #a9b7c6;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-font-size: 12px;
+}
+
+/* Ползунок */
+.slider .thumb {
+    -fx-background-color: #4078c8;
+    -fx-background-radius: 10;
+    -fx-pref-width: 14;
+    -fx-pref-height: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0, 0, 1);
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #3574f0;
+}
+
+.slider .track {
+    -fx-background-color: #3c3f41;
+    -fx-background-radius: 4;
+    -fx-pref-height: 4;
+    -fx-border-color: transparent;
+}
+
+.slider .track:filled {
+    -fx-background-color: #4078c8;
+    -fx-background-radius: 4;
+    -fx-border-color: transparent;
+}
+
+/* ══════════════════════════════════════════════
+   SEARCH BAR (нижняя панель с формой поиска)
+   ══════════════════════════════════════════════ */
+
+#AnchorPane1_layer6_AnchorPane {
+    -fx-background-color: #2b2d30;
+    -fx-border-color: #393b40;
+    -fx-border-width: 1 0 0 0;
+}
+
+.search-text-area {
+    -fx-background-color: #313335;
+    -fx-text-fill: #a9b7c6;
+    -fx-prompt-text-fill: #6c707b;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 13px;
+    -fx-padding: 4 8;
+}
+
+.search-text-area:focused {
+    -fx-border-color: #4078c8;
+    -fx-effect: dropshadow(gaussian, rgba(64, 120, 200, 0.2), 4, 0, 0, 0);
+}
+
+/* ══════════════════════════════════════════════
+   ПОЛЯ ВВОДА (классы объектов, расширения)
+   ══════════════════════════════════════════════ */
+
+.drop-field {
+    -fx-background-color: #313335;
+    -fx-text-fill: #a9b7c6;
+    -fx-prompt-text-fill: #6c707b;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 4 8;
+    -fx-font-size: 13px;
+}
+
+.drop-field:focused {
+    -fx-border-color: #4078c8;
+    -fx-effect: dropshadow(gaussian, rgba(64, 120, 200, 0.25), 4, 0, 0, 0);
+    -fx-background-color: #2e3035;
+}
+
+/* ══════════════════════════════════════════════
+   LABELS (общие)
+   ══════════════════════════════════════════════ */
+
+.label {
+    -fx-text-fill: #a9b7c6;
+    -fx-font-size: 13px;
+}
+
+.search-results-container .label,
+.search-results-container .button,
+.search-results-container .text-area {
+    -fx-text-fill: #a9b7c6;
+}
+
+/* ══════════════════════════════════════════════
+   DATE PICKER
+   ══════════════════════════════════════════════ */
+
+.date-picker {
+    -fx-background-color: #313335;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.date-picker .text-field {
+    -fx-background-color: #313335;
+    -fx-text-fill: #a9b7c6;
+    -fx-prompt-text-fill: #6c707b;
+    -fx-border-color: transparent;
+    -fx-padding: 3 6;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #4c5052;
+}
+
+.date-picker:focused .text-field,
+.date-picker:showing {
+    -fx-border-color: #4078c8;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #2b2d30;
+}
+
+.date-picker-popup > * > .previous-button,
+.date-picker-popup > * > .next-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a9b7c6;
+}
+
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell {
+    -fx-text-fill: #6c707b;
+    -fx-font-size: 11px;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: #313335;
+    -fx-text-fill: #a9b7c6;
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #3c3f41;
+}
+
+.date-picker-popup > * > .day-cell:selected {
+    -fx-background-color: #214283;
+    -fx-text-fill: #ffffff;
+}
+
+.date-picker-popup > * > .today {
+    -fx-border-color: #4078c8;
+    -fx-border-width: 1;
+}
+
+/* ══════════════════════════════════════════════
+   LIST VIEW
+   ══════════════════════════════════════════════ */
+
+.list-view {
+    -fx-background-color: #2b2d30;
+    -fx-border-color: #555759;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 2;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #a9b7c6;
+    -fx-background-color: transparent;
+    -fx-padding: 4 8;
+    -fx-font-size: 13px;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: #2e3035;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #cdd2d8;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #214283;
+    -fx-text-fill: #a9b7c6;
+}
+
+.list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #2a5298;
+}
+
+/* ══════════════════════════════════════════════
+   ТЕГИ КЛАССОВ ОБЪЕКТОВ
+   ══════════════════════════════════════════════ */
+
+.object-class-tag {
+    -fx-background-color: #1e2a3a;
+    -fx-background-radius: 4;
+    -fx-padding: 2 6 2 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: #4078c8;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-spacing: 4;
+    -fx-cursor: default;
+}
+
+.object-class-tag:hover {
+    -fx-background-color: #253448;
+    -fx-border-color: #3574f0;
+}
+
+.object-class-tag-name {
+    -fx-text-fill: #a9b7c6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.object-class-tag-count {
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-text-fill: #6c9ee0;
+    -fx-padding: 0 2 0 2;
+}
+
+.tag-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a9b7c6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 3;
+    -fx-min-width: 18px;
+    -fx-pref-width: 18px;
+    -fx-min-height: 18px;
+    -fx-pref-height: 18px;
+    -fx-cursor: hand;
+    -fx-background-radius: 3;
+    -fx-border-color: transparent;
+}
+
+.tag-button:hover {
+    -fx-background-color: #3574f0;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 3;
+    -fx-border-color: transparent;
+    -fx-effect: null;
+}
+
+.tag-button:pressed {
+    -fx-background-color: #214283;
+    -fx-text-fill: #ffffff;
+}
+
+/* Кнопка удаления тега */
+.object-class-tag-remove-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6c707b;
+    -fx-font-size: 11px;
+    -fx-padding: 0 3;
+    -fx-min-width: 16px;
+    -fx-pref-width: 16px;
+    -fx-min-height: 16px;
+    -fx-pref-height: 16px;
+    -fx-cursor: hand;
+    -fx-background-radius: 3;
+    -fx-border-color: transparent;
+}
+
+.object-class-tag-remove-button:hover {
+    -fx-background-color: rgba(207, 102, 121, 0.2);
+    -fx-text-fill: #cf6679;
+    -fx-border-color: #cf6679;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+}
+
+.object-class-tag-remove-button:pressed {
+    -fx-background-color: rgba(207, 102, 121, 0.4);
+    -fx-text-fill: #e07080;
+}
+
+/* ══════════════════════════════════════════════
+   PROGRESS INDICATOR
+   ══════════════════════════════════════════════ */
+
+.progress-indicator {
+    -fx-progress-color: #3574f0;
+    -fx-background-color: transparent;
+}
+
+.progress-indicator > .spinner {
+    -fx-background-color: transparent;
+}
+
+.progress-indicator .arc {
+    -fx-stroke: #3574f0;
+}
+
+/* ══════════════════════════════════════════════
+   SCROLL PANE (глобальный — для FlowPane тегов)
+   ══════════════════════════════════════════════ */
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: #1e1f22;
+    -fx-pref-width: 8;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #4c5052;
+    -fx-background-radius: 4;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #6c707b;
+}
+
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+}
+
+.scroll-pane .scroll-bar .increment-arrow,
+.scroll-pane .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* ══════════════════════════════════════════════
+   TOOLTIP
+   ══════════════════════════════════════════════ */
+
+.tooltip {
+    -fx-background-color: #1e1f22;
+    -fx-text-fill: #a9b7c6;
+    -fx-border-color: #555759;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-font-size: 12px;
+    -fx-padding: 4 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0, 0, 2);
+}
+
+/* ══════════════════════════════════════════════
+   STATUS BAR
+   ══════════════════════════════════════════════ */
+
+.status-bar-label {
+    -fx-text-fill: #6c707b;
+    -fx-font-size: 11px;
+    -fx-background-color: transparent;
+    -fx-padding: 0 4;
+}
+
+/* ══════════════════════════════════════════════
+   FLOW PANE (контейнер тегов и расширений)
+   ══════════════════════════════════════════════ */
+
+#anchorObjectListBackgroundAnchor {
+    -fx-background-color: #252628;
+    -fx-border-color: #393b40;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-min-height: 32;
+}
+
+/* ══════════════════════════════════════════════
+   ROUND BUTTON (утилитарный класс)
+   ══════════════════════════════════════════════ */
+
+.round-button {
+    -fx-background-radius: 1000;
+    -fx-background-color: #313335;
+    -fx-border-color: #4078c8;
+    -fx-border-radius: 1000;
+    -fx-border-width: 1;
+    -fx-text-fill: #a9b7c6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 0, 1);
+}
+
+.round-button:hover {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #3574f0;
+    -fx-text-fill: #cdd2d8;
+    -fx-effect: dropshadow(gaussian, rgba(53, 116, 240, 0.35), 6, 0, 0, 0);
+}
+
+.round-button:pressed {
+    -fx-background-color: #214283;
+    -fx-effect: null;
+}

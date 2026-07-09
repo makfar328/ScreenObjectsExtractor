@@ -1,0 +1,15 @@
+.item-box {
+    -fx-text-fill: #b3cbcd;
+    -fx-font-size: 12;
+    -fx-background-color: #2f3261;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-width: 0;
+    -fx-border-color: #cdcdcd;
+}
+
+.item-box:hover {
+    -fx-background-color: #636aba;
+    -fx-border-width: 1;
+    size: bold;
+}

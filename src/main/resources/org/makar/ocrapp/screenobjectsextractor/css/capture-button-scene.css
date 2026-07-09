@@ -1,0 +1,25 @@
+.capture-button-container {
+    -fx-background-color: transparent;
+}
+
+/* Стили для круглой формы кнопки */
+.capture-button-circle {
+    -fx-fill: rgba(255, 255, 255, 0.01); /* хит-тестинг */
+    -fx-stroke: blue;
+    -fx-stroke-width: 2;
+    -fx-effect: null;
+    -fx-transition: -fx-effect 0.2s ease-in-out, -fx-fill 0.2s ease-in-out, -fx-stroke 0.2s ease-in-out; /* Плавные переходы */
+}
+
+/* Эффект при наведении на круглую форму */
+.capture-button-circle:hover {
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0); /* Внутреннее свечение */
+    -fx-fill: rgba(255, 255, 255, 0.1);
+    -fx-stroke: white;
+}
+
+.image-view:hover {
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0); /* Внутреннее свечение */
+    -fx-fill: rgba(255, 255, 255, 0.1);
+    -fx-stroke: white;
+}
